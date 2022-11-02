@@ -1,0 +1,29 @@
+@import 'base';
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 500px;
+    height: 100vh;
+    margin: auto;
+    text-align: center;
+
+    h1{
+        background: -webkit-linear-gradient(199deg, rgba(244,94,157,1) 0%, rgba(191,24,106,1) 100%);;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: #f45e9d;
+        font-size: 50px;
+        text-transform: uppercase;
+        line-height: 40px;
+        letter-spacing: 2px;
+    }
+
+    h2{
+        color: white;
+        font-weight: 300;
+        text-transform: uppercase;
+        margin-top: 20px;
+    }
+}

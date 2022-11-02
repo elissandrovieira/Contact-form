@@ -1,0 +1,187 @@
+@import 'base';
+
+.container{
+    display: flex;
+    margin: 50px auto 0 auto;
+    padding: 0 30px;
+    max-width: 1200px;
+
+    h1{
+        background: -webkit-linear-gradient(199deg, rgba(244,94,157,1) 0%, rgba(191,24,106,1) 100%);;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: #f45e9d;
+        font-size: 50px;
+        text-transform: uppercase;
+        line-height: 40px;
+        letter-spacing: 2px;
+    }
+
+    .content{
+        width: 50%;
+        
+        form{
+            margin-top: 30px;
+            max-width: 400px;
+
+            div{
+                display: flex;
+                flex-direction: column;
+
+                label{
+                    color: rgb(255, 255, 255);
+                    font-weight: 300;
+                }
+
+                input, textarea{
+                    height: 40px;
+                    border: 0;
+                    border-bottom: 2px solid #826dd6;
+                    background: none;
+                    color: white;
+                    resize: none;
+                    
+                    &::placeholder{
+                        color: #826dd6;
+                        font-family: 'Kanit', sans-serif;
+                        font-weight: 300;
+                    }
+
+                    &:focus{
+                        border: none;
+                    }
+
+                    &.error{
+                        border-bottom: 2px solid #f0464e;
+                    }
+                }
+
+                .error-tag{
+                    color: #f0464e;
+                    height: 30px;
+                }
+            }
+            
+            button{
+                background: rgb(244,94,157);
+                background: linear-gradient(185deg, rgba(244,94,157,1) 0%, rgba(191,24,106,1) 100%);
+                width: 100%;
+                height: 50px;
+                margin-top: 10px;
+                border: none;
+                border-radius: 5px;
+                color: white;
+                font-family: 'Kanit', sans-serif;
+                font-weight: 400;
+                font-size: 15px;
+                letter-spacing: 2px;
+                cursor: pointer;
+                transition: 100ms;
+
+                &:hover{
+                    transform: scale(1.02);
+                    background: linear-gradient(185deg, rgb(250, 117, 172) 0%, rgb(204, 43, 121) 100%);
+                }
+            }
+        }
+    }
+
+    .img{
+        display: flex;
+        align-items:flex-end;
+        justify-content: center;
+        width: 50%;
+        overflow: hidden;
+
+        #rocket{
+            width: 350px;
+            object-fit: contain;
+            animation-name: rocket;
+            animation-duration: 300ms;
+            animation-iteration-count: infinite;
+        }
+        
+        @keyframes rocket {
+            0%{
+                transform: translate(3px, -3px);
+            }
+            33%{
+                transform: translate(-3px, 3px);
+            }
+            66%{
+                transform: translate(-5px, -3px);
+            }
+            100%{
+                transform: translate(3px, -3px);
+            }
+        }
+        
+        .stars{
+            animation-name: starsAnimation;
+            animation-duration: 200ms;
+            animation-iteration-count: infinite;
+
+            span{
+                position: absolute;
+                height: 10px;
+                width: 50px;
+                background: linear-gradient(90deg, rgba(255, 255, 255, 0.459) 0%, #ffffff00 80%);
+                border-radius: 50px 0 0 50px;
+                animation-name: starsAnimation;
+                animation-duration: 5000ms;
+                animation-iteration-count: infinite;
+    
+                &:nth-child(1){
+                    bottom: 600px;
+                    right: 200px;
+                    transform: rotate(-50deg);
+                }
+    
+                &:nth-child(2){
+                    bottom: 650px;
+                    right: 0px;
+                    transform: rotate(-50deg);
+                }
+    
+                &:nth-child(3){
+                    bottom: 350px;
+                    right: 200px;
+                    transform: rotate(-50deg);
+                }
+
+            }
+        }
+
+        @keyframes starsAnimation {
+            0%{
+                z-index: 1;
+                transform: rotate(-30deg) translate(600px, 00px);
+            }
+            100%{
+                z-index: 1;
+                transform: 
+                rotate(-30deg) 
+                translate(-100px, 300px);
+            }
+        }
+
+    }
+}
+
+@media(max-width:800px){
+    .container{
+        justify-content: center;
+
+        h1{
+            text-align: center;
+        }
+        .content{
+            width: 100%;
+        }
+        .img{
+            display: none;
+        }
+    }
+}
+
+

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rocket - Contact Form</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/main.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Let's start
+                <br>our journey
+                <br>together!</h1>
+            <form action="thanks.hmtl" id="contact-form">
+                <div>
+                    <label for="name">FULL NAME</label>
+                    <input type="text" placeholder="Enter your full name" id="name" name="name">
+                    <span class="error-tag"></span>
+                </div>
+                <div>
+                    <label for="email">E-MAIL</label>
+                    <input type="email" placeholder="Your e-mail goes here" id="email" name="email">
+                    <span class="error-tag"></span>
+                </div>
+                <div>
+                    <label for="phone">PHONE</label>
+                    <input type="tel" placeholder="Enter your phone number" id="phone" name="phone">
+                    <span class="error-tag"></span>
+                </div>
+                <div>
+                    <label for="message">MESSAGE</label>
+                    <textarea placeholder="Tell us how we can help you" id="message" name="message" rows="4" cols="50"></textarea>
+                    <span class="error-tag"></span>
+                </div>
+                <button type="submit">SEND YOUR MESSAGE</button>
+    
+            </form>
+        </div>
+        <div class="img">
+            <div class="stars">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <img src="img/rocket.png" alt="Rocket" id="rocket">
+        </div>
+    </div>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>

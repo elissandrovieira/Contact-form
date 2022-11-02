@@ -1,0 +1,214 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Kanit", sans-serif;
+  background-image: url(../img/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container {
+  display: flex;
+  margin: 50px auto 0 auto;
+  padding: 0 30px;
+  max-width: 1200px;
+}
+.container h1 {
+  background: -webkit-linear-gradient(199deg, rgb(244, 94, 157) 0%, rgb(191, 24, 106) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: #f45e9d;
+  font-size: 50px;
+  text-transform: uppercase;
+  line-height: 40px;
+  letter-spacing: 2px;
+}
+.container .content {
+  width: 50%;
+}
+.container .content form {
+  margin-top: 30px;
+  max-width: 400px;
+}
+.container .content form div {
+  display: flex;
+  flex-direction: column;
+}
+.container .content form div label {
+  color: rgb(255, 255, 255);
+  font-weight: 300;
+}
+.container .content form div input, .container .content form div textarea {
+  height: 40px;
+  border: 0;
+  border-bottom: 2px solid #826dd6;
+  background: none;
+  color: white;
+  resize: none;
+}
+.container .content form div input::-moz-placeholder, .container .content form div textarea::-moz-placeholder {
+  color: #826dd6;
+  font-family: "Kanit", sans-serif;
+  font-weight: 300;
+}
+.container .content form div input:-ms-input-placeholder, .container .content form div textarea:-ms-input-placeholder {
+  color: #826dd6;
+  font-family: "Kanit", sans-serif;
+  font-weight: 300;
+}
+.container .content form div input::placeholder, .container .content form div textarea::placeholder {
+  color: #826dd6;
+  font-family: "Kanit", sans-serif;
+  font-weight: 300;
+}
+.container .content form div input:focus, .container .content form div textarea:focus {
+  border: none;
+}
+.container .content form div input.error, .container .content form div textarea.error {
+  border-bottom: 2px solid #f0464e;
+}
+.container .content form div .error-tag {
+  color: #f0464e;
+  height: 30px;
+}
+.container .content form button {
+  background: rgb(244, 94, 157);
+  background: linear-gradient(185deg, rgb(244, 94, 157) 0%, rgb(191, 24, 106) 100%);
+  width: 100%;
+  height: 50px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: 100ms;
+}
+.container .content form button:hover {
+  transform: scale(1.02);
+  background: linear-gradient(185deg, rgb(250, 117, 172) 0%, rgb(204, 43, 121) 100%);
+}
+.container .img {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 50%;
+  overflow: hidden;
+}
+.container .img #rocket {
+  width: 350px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-animation-name: rocket;
+          animation-name: rocket;
+  -webkit-animation-duration: 300ms;
+          animation-duration: 300ms;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+@-webkit-keyframes rocket {
+  0% {
+    transform: translate(3px, -3px);
+  }
+  33% {
+    transform: translate(-3px, 3px);
+  }
+  66% {
+    transform: translate(-5px, -3px);
+  }
+  100% {
+    transform: translate(3px, -3px);
+  }
+}
+@keyframes rocket {
+  0% {
+    transform: translate(3px, -3px);
+  }
+  33% {
+    transform: translate(-3px, 3px);
+  }
+  66% {
+    transform: translate(-5px, -3px);
+  }
+  100% {
+    transform: translate(3px, -3px);
+  }
+}
+.container .img .stars {
+  -webkit-animation-name: starsAnimation;
+          animation-name: starsAnimation;
+  -webkit-animation-duration: 200ms;
+          animation-duration: 200ms;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.container .img .stars span {
+  position: absolute;
+  height: 10px;
+  width: 50px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.459) 0%, rgba(255, 255, 255, 0) 80%);
+  border-radius: 50px 0 0 50px;
+  -webkit-animation-name: starsAnimation;
+          animation-name: starsAnimation;
+  -webkit-animation-duration: 5000ms;
+          animation-duration: 5000ms;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.container .img .stars span:nth-child(1) {
+  bottom: 600px;
+  right: 200px;
+  transform: rotate(-50deg);
+}
+.container .img .stars span:nth-child(2) {
+  bottom: 650px;
+  right: 0px;
+  transform: rotate(-50deg);
+}
+.container .img .stars span:nth-child(3) {
+  bottom: 350px;
+  right: 200px;
+  transform: rotate(-50deg);
+}
+@-webkit-keyframes starsAnimation {
+  0% {
+    z-index: 1;
+    transform: rotate(-30deg) translate(600px, 0px);
+  }
+  100% {
+    z-index: 1;
+    transform: rotate(-30deg) translate(-100px, 300px);
+  }
+}
+@keyframes starsAnimation {
+  0% {
+    z-index: 1;
+    transform: rotate(-30deg) translate(600px, 0px);
+  }
+  100% {
+    z-index: 1;
+    transform: rotate(-30deg) translate(-100px, 300px);
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    justify-content: center;
+  }
+  .container h1 {
+    text-align: center;
+  }
+  .container .content {
+    width: 100%;
+  }
+  .container .img {
+    display: none;
+  }
+}/*# sourceMappingURL=main.css.map */
